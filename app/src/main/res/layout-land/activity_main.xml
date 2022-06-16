@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="-15dp">
+
+    <TextView
+        android:id="@+id/lblMath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:text="Math Grade:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtMathGrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/lblMath"
+        app:layout_constraintStart_toEndOf="@+id/lblMath"
+        app:layout_constraintTop_toTopOf="@+id/lblMath"
+        app:layout_constraintVertical_bias="0.461" />
+
+    <EditText
+        android:id="@+id/edtScienceGrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/lblScience"
+        app:layout_constraintStart_toStartOf="@+id/edtMathGrade"
+        app:layout_constraintTop_toTopOf="@+id/lblScience"
+        app:layout_constraintVertical_bias="0.653" />
+
+    <EditText
+        android:id="@+id/edtEnglishGrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/lblEnglish"
+        app:layout_constraintStart_toStartOf="@+id/edtScienceGrade"
+        app:layout_constraintTop_toTopOf="@+id/lblEnglish"
+        app:layout_constraintVertical_bias="0.653" />
+
+    <EditText
+        android:id="@+id/edtHistoryGrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/lblHistory"
+        app:layout_constraintStart_toStartOf="@+id/edtEnglishGrade"
+        app:layout_constraintTop_toTopOf="@+id/lblHistory"
+        app:layout_constraintVertical_bias="0.461" />
+
+    <EditText
+        android:id="@+id/edtProgrammingGrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/lblProgramming"
+        app:layout_constraintStart_toStartOf="@+id/edtHistoryGrade"
+        app:layout_constraintTop_toTopOf="@+id/lblProgramming"
+        app:layout_constraintVertical_bias="0.653" />
+
+    <TextView
+        android:id="@+id/lblScience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Science Grade:"
+        app:layout_constraintStart_toStartOf="@+id/lblMath"
+        app:layout_constraintTop_toBottomOf="@+id/lblMath" />
+
+    <TextView
+        android:id="@+id/lblEnglish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="English Grade:"
+        app:layout_constraintStart_toStartOf="@+id/lblScience"
+        app:layout_constraintTop_toBottomOf="@+id/lblScience" />
+
+    <TextView
+        android:id="@+id/lblHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="History Grade:"
+        app:layout_constraintStart_toStartOf="@+id/lblEnglish"
+        app:layout_constraintTop_toBottomOf="@+id/lblEnglish" />
+
+    <TextView
+        android:id="@+id/lblProgramming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Programming Grade:"
+        app:layout_constraintStart_toStartOf="@+id/lblHistory"
+        app:layout_constraintTop_toBottomOf="@+id/lblHistory" />
+
+    <Button
+        android:id="@+id/btnComputeGPA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="76dp"
+        android:text="Compute GPA"
+        app:layout_constraintBottom_toBottomOf="@+id/edtProgrammingGrade"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:text="GPA Calculator"
+        app:layout_constraintEnd_toEndOf="@+id/btnComputeGPA"
+        app:layout_constraintStart_toEndOf="@+id/edtScienceGrade"
+        app:layout_constraintTop_toTopOf="@+id/edtMathGrade" />
+
+    <TextView
+        android:id="@+id/txtGPA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="GPA:"
+        app:layout_constraintEnd_toEndOf="@+id/btnComputeGPA"
+        app:layout_constraintStart_toStartOf="@+id/btnComputeGPA"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
